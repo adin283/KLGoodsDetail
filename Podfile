@@ -10,6 +10,7 @@ target 'KLGoodsDetail' do
   # Pods for KLGoodsDetail
   pod "KLProtocolManager"
   pod "KLGoodsDetailServiceProtocol"
+  pod "KLConfirmOrderServiceProtocol"
 
   target 'KLGoodsDetailTests' do
     inherit! :search_paths

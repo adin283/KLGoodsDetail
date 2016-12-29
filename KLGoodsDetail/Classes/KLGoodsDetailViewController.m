@@ -7,6 +7,8 @@
 //
 
 #import "KLGoodsDetailViewController.h"
+#import <KLConfirmOrderServiceProtocol/KLConfirmOrderServiceProtocol.h>
+#import <KLProtocolManager/KLProtocolManager.h>
 
 @interface KLGoodsDetailViewController ()
 
@@ -58,7 +60,13 @@
 #pragma mark - event
 - (void)didClickBuyButton:(UIButton *)button
 {
-    
+    id<KLConfirmOrderServiceProtocol> provider = [KLProtocolManager serviceProviderForProtocol:@protocol(KLConfirmOrderServiceProtocol)];
+    UIViewController *viewController = [provider confirmOrderViewControllerWithGoodsId:self.goodsId sureComplete:^{
+        self.statusLabel.text = @"购买成功";
+    }];
+    if (viewController) {
+        [self presentViewController:viewController animated:YES completion:nil];
+    }
 }
 
 #pragma mark - Getters
