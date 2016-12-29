@@ -1,0 +1,15 @@
+PODS:
+  - KLGoodsDetailServiceProtocol (0.0.2)
+  - KLProtocolManager (0.0.4)
+
+DEPENDENCIES:
+  - KLGoodsDetailServiceProtocol
+  - KLProtocolManager
+
+SPEC CHECKSUMS:
+  KLGoodsDetailServiceProtocol: 163f9b4b7c73d0d988fb7c20d89b54c20cc7dee2
+  KLProtocolManager: 392d91970a5c3e76320432ca59d64ae816958b8c
+
+PODFILE CHECKSUM: 3f158615bd774f7c92ec60385b094b9c67c972c5
+
+COCOAPODS: 1.1.1
